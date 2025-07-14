@@ -1,0 +1,224 @@
+{
+  "players": [
+    "Jugador 1",
+    "Jugador 2",
+    "Jugador 3",
+    "Jugador 4",
+    "Jugador 5",
+    "Jugador 6",
+    "Jugador 7",
+    "Jugador 8",
+    "Jugador 9",
+    "Jugador 10",
+    "Jugador 11",
+    "Jugador 12",
+    "Jugador 13",
+    "Jugador 14",
+    "Jugador 15",
+    "Jugador 16",
+    "Jugador 17",
+    "Jugador 18",
+    "Jugador 19",
+    "Jugador 20",
+    "Jugador 21",
+    "Jugador 22",
+    "Jugador 23",
+    "Jugador 24",
+    "Jugador 25",
+    "Jugador 26",
+    "Jugador 27",
+    "Jugador 28",
+    "Jugador 29",
+    "Jugador 30",
+    "Jugador 31",
+    "Jugador 32"
+  ],
+  "matches": {
+    "1": {
+      "round": 1,
+      "teamA": null,
+      "teamB": null,
+      "winner": null
+    },
+    "2": {
+      "round": 1,
+      "teamA": null,
+      "teamB": null,
+      "winner": null
+    },
+    "3": {
+      "round": 1,
+      "teamA": null,
+      "teamB": null,
+      "winner": null
+    },
+    "4": {
+      "round": 1,
+      "teamA": null,
+      "teamB": null,
+      "winner": null
+    },
+    "5": {
+      "round": 1,
+      "teamA": null,
+      "teamB": null,
+      "winner": null
+    },
+    "6": {
+      "round": 1,
+      "teamA": null,
+      "teamB": null,
+      "winner": null
+    },
+    "7": {
+      "round": 1,
+      "teamA": null,
+      "teamB": null,
+      "winner": null
+    },
+    "8": {
+      "round": 1,
+      "teamA": null,
+      "teamB": null,
+      "winner": null
+    },
+    "9": {
+      "round": 1,
+      "teamA": null,
+      "teamB": null,
+      "winner": null
+    },
+    "10": {
+      "round": 1,
+      "teamA": null,
+      "teamB": null,
+      "winner": null
+    },
+    "11": {
+      "round": 1,
+      "teamA": null,
+      "teamB": null,
+      "winner": null
+    },
+    "12": {
+      "round": 1,
+      "teamA": null,
+      "teamB": null,
+      "winner": null
+    },
+    "13": {
+      "round": 1,
+      "teamA": null,
+      "teamB": null,
+      "winner": null
+    },
+    "14": {
+      "round": 1,
+      "teamA": null,
+      "teamB": null,
+      "winner": null
+    },
+    "15": {
+      "round": 1,
+      "teamA": null,
+      "teamB": null,
+      "winner": null
+    },
+    "16": {
+      "round": 1,
+      "teamA": null,
+      "teamB": null,
+      "winner": null
+    },
+    "17": {
+      "round": 2,
+      "teamA": null,
+      "teamB": null,
+      "winner": null
+    },
+    "18": {
+      "round": 2,
+      "teamA": null,
+      "teamB": null,
+      "winner": null
+    },
+    "19": {
+      "round": 2,
+      "teamA": null,
+      "teamB": null,
+      "winner": null
+    },
+    "20": {
+      "round": 2,
+      "teamA": null,
+      "teamB": null,
+      "winner": null
+    },
+    "21": {
+      "round": 2,
+      "teamA": null,
+      "teamB": null,
+      "winner": null
+    },
+    "22": {
+      "round": 2,
+      "teamA": null,
+      "teamB": null,
+      "winner": null
+    },
+    "23": {
+      "round": 2,
+      "teamA": null,
+      "teamB": null,
+      "winner": null
+    },
+    "24": {
+      "round": 2,
+      "teamA": null,
+      "teamB": null,
+      "winner": null
+    },
+    "25": {
+      "round": 3,
+      "teamA": null,
+      "teamB": null,
+      "winner": null
+    },
+    "26": {
+      "round": 3,
+      "teamA": null,
+      "teamB": null,
+      "winner": null
+    },
+    "27": {
+      "round": 3,
+      "teamA": null,
+      "teamB": null,
+      "winner": null
+    },
+    "28": {
+      "round": 3,
+      "teamA": null,
+      "teamB": null,
+      "winner": null
+    },
+    "29": {
+      "round": 4,
+      "teamA": null,
+      "teamB": null,
+      "winner": null
+    },
+    "30": {
+      "round": 4,
+      "teamA": null,
+      "teamB": null,
+      "winner": null
+    },
+    "31": {
+      "round": 5,
+      "teamA": null,
+      "teamB": null,
+      "winner": null
+    }
+  }
+}
