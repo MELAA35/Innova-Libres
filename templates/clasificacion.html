@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Fixture 32 Equipos - FIFA 25</title>
+    <style>
+        body{
+            background-color:#0f172a;
+            font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+            margin:0;padding:20px;color:#fff;text-align:center;
+        }
+        h1{font-size:2em;margin-bottom:20px;}
+
+        form{display:flex;flex-direction:column;align-items:center;}
+
+        .ronda{
+            display:flex;gap:40px;justify-content:center;
+            margin:30px 0;flex-wrap:wrap;
+        }
+        .partido{
+            background:#22caff;border-radius:12px;padding:12px 20px;
+            width:160px;font-weight:bold;color:#000;margin-bottom:10px;
+            position:relative;
+        }
+        .partido::after{
+            content:"";position:absolute;right:-20px;top:50%;
+            width:20px;height:2px;background:#444;
+        }
+        .ronda:last-child .partido::after{display:none;}
+
+        input[type="text"]{
+            background:#22caff;border:none;border-radius:12px;
+            padding:10px;width:180px;margin:5px;
+            font-weight:bold;color:#000;text-align:center;
+        }
+        /* NUEVO: grilla para los jugadores */
+        .grid-jugadores{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+            gap:15px;max-width:800px;margin:0 auto;justify-items:center;
+        }
+
+        input[type="radio"]{margin-right:8px;}
+
+        button{
+            background:#22caff;color:#000;font-weight:bold;
+            padding:10px 20px;margin-top:20px;border:none;
+            border-radius:10px;cursor:pointer;transition:background .3s;
+        }
+        button:hover{background:#1bb1dd;}
+
+        strong{
+            background:#22caff;display:inline-block;padding:10px;
+            border-radius:12px;color:#000;
+        }
+    </style>
+</head>
+<body>
+    <h1>TORNEO DE INVIERNO - FIFA 25</h1>
+
+    <form method="POST">
+        {% if not rondas %}
+            <div class="ronda">
+                <!-- reemplazado flex‑column por grilla -->
+                <div class="grid-jugadores">
+                    {% for i in range(1, 33) %}
+                        <input type="text" name="player{{ i }}" placeholder="Jugador {{ i }}">
+                    {% endfor %}
+                </div>
+            </div>
+            <button type="submit">Iniciar Torneo</button>
+
+        {% else %}
+            {% for ronda in rondas %}
+                {% set ronda_index = loop.index0 %}
+                {% set ronda_finalizada = ganadores is defined and ganadores|length > ronda_index %}
+                <div class="ronda">
+                    <h2>Ronda {{ loop.index }}</h2>
+
+                    {% for partido in ronda %}
+                        {% set i = loop.index0 %}
+                        <div class="partido">
+                            {% if partido[1] %}
+                                {% if ronda_finalizada %}
+                                    <strong>{{ ganadores[ronda_index][i] }}</strong>
+                                {% else %}
+                                    <label>
+                                        <input type="radio" name="ganador{{ ronda_index }}_{{ i }}" value="{{ partido[0] }}" required>
+                                        {{ partido[0] }}
+                                    </label><br>vs<br>
+                                    <label>
+                                        <input type="radio" name="ganador{{ ronda_index }}_{{ i }}" value="{{ partido[1] }}">
+                                        {{ partido[1] }}
+                                    </label>
+                                {% endif %}
+                            {% else %}
+                                <strong>🏆 {{ partido[0] }}</strong>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+
+            {% if rondas[-1][0][1] == "" %}
+                <a href="{{ url_for('ganador') }}"><button type="button">VER GANADOR</button></a>
+            {% else %}
+                <button type="submit">Avanzar Ronda</button>
+            {% endif %}
+        {% endif %}
+    </form>
+
+    <br>
+    <a href="{{ url_for('reiniciar') }}">
+        <button type="button">Reiniciar Torneo</button>
+    </a>
+</body>
+</html>
